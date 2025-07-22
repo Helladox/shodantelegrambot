@@ -5,3 +5,4 @@ shodan>=1.31.0
 aiohttp>=3.9.0
 click>=8.1.0
 Flask
+gunicorn
