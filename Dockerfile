@@ -24,7 +24,7 @@ RUN useradd --create-home --shell /bin/bash botuser && \
 USER botuser
 
 # Expose port for bot (if needed)
-EXPOSE 8080
+EXPOSE 5000
 
 # Run the bot
-CMD ["python", "run_bot.py"]
+CMD ["bash", "-c", "gunicorn app:app --bind 0.0.0.0:5000 & python3 run_bot.py"]
